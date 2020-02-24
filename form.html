@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<html>
+    <head>
+          <style>
+            body
+            {
+                background-color: lightblue;
+            }
+          </style>
+        <title>Interests</title>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">Interests Page</a>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+        </ul>
+      </nav>
+      <h1> Add New Interest </h1>
+
+      <form>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Interest Name</label>
+          <input type = "email" class = "form-control" id = "username" required = "true" placeholder = "Name">
+        </div>
+
+        <label class="description" for="element_2">Text about the interest </label>
+    		<div>
+    			<textarea id="element_2" name="element_2" class="element textarea medium" placeholder = "Description..." ></textarea>
+    		</div>
+
+        <div class = "form-group col">
+            <label class = "font-weight-bold">Upload File:</label>
+            <input type = "file" class = "form-control-file">
+        </div>
+
+        <div class = "form-group col">
+            <label class = "font-weight-bold">Select # Tweets to Display:</label>
+
+            <select class = "form-control">
+                <option value = "" selected disabled></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+
+        <div class = "form-group" align = "center">
+            <label> On a scale of 1-5, how interested in this are you? </label>
+
+            <div class = "form-check">
+                <form action = "" method = "post">
+                    <input type = "radio" name = "interest" value = "1" /> 1
+                    <input type = "radio" name = "interest" value = "2" /> 2
+                    <input type = "radio" name = "interest" value = "3" /> 3
+                    <input type = "radio" name = "interest" value = "3" /> 4
+                    <input type = "radio" name = "interest" value = "3" /> 5
+                </form>
+            </div>
+        </div>
+
+        <div class = "form-group" align = "center">
+
+            <label> Login to finish submitting </label>
+
+            <br>
+
+            <div class = "form-group; text-align: center" style = "padding-left: 300px; padding-right: 300px">
+                <input type = "email" class = "form-control" id = "username" required = "true" placeholder = "Username (Email)">
+                <input type = "password" class = "form-control" id = "password" required = "true" placeholder = "Password">
+            </div>
+
+
+            <br> </br>
+
+            <button type = "submit" class = "btn btn-primary">Submit</button>
+
+        </div>
+
+      </form>
+      <script>
+       //Support: https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_form_custom_file&stacked=h
+      (".custom-file-input").on("change", function() {
+          var fileName = (this).val().split("\\").pop();
+          (this).siblings(".custom-file-label").addClass("selected").html(fileName);
+      });
+      </script>
+
+
+
+
+
+    </body>
